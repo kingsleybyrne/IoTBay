@@ -5,11 +5,13 @@
  */
 package dao;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kingsleybyrne
  */
-public class Product {
+public class Product implements Serializable{
     private int productId;
     private String name;
     private String description;
@@ -18,6 +20,9 @@ public class Product {
     private Supplier supplier;
     private double price;
 
+    public Product(){
+    }
+    
     /**
      * @return the productId
      */

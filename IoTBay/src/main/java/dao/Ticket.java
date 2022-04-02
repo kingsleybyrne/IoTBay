@@ -5,15 +5,18 @@
  */
 package dao;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kingsleybyrne
  */
-public class Ticket {
+public class Ticket implements Serializable{
     private int ticketId;
     private String ticketDescription;
     private boolean ticketStatus;
 
+    public Ticket(){}
     /**
      * @return the ticketId
      */

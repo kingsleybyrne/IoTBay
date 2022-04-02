@@ -5,144 +5,43 @@
  */
 package dao;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kingsleybyrne
  */
-public class Customer {
-    private int customerId;
-    private String name;
-    private String email;
-    private String phone;
-    private String address;
-    private String password;
-    private String dateOfBirth;
-    private String payementDetails; //needs to be an object of payment details
-    private String paymentHistory;
+public class Customer implements Serializable{
+    private int customerID;
+    private String[] promoCode;
 
+    public Customer(){}
     /**
-     * @return the customerId
+     * @return the userId
      */
     public int getCustomerId() {
-        return customerId;
+        return customerID;
     }
 
     /**
-     * @param customerId the customerId to set
+     * @param userId the userId to set
      */
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setUserId(int customerID) {
+        this.customerID = customerID;
     }
 
     /**
-     * @return the name
+     * @return the promoCode
      */
-    public String getName() {
-        return name;
+    public String[] getPromoCode() {
+        return promoCode;
     }
 
     /**
-     * @param name the name to set
+     * @param promoCode the promoCode to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setPromoCode(String[] promoCode) {
+        this.promoCode = promoCode;
     }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return the phone
-     */
-    public String getPhone() {
-        return phone;
-    }
-
-    /**
-     * @param phone the phone to set
-     */
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    /**
-     * @return the address
-     */
-    public String getAddress() {
-        return address;
-    }
-
-    /**
-     * @param address the address to set
-     */
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    /**
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * @return the dateOfBirth
-     */
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    /**
-     * @param dateOfBirth the dateOfBirth to set
-     */
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    /**
-     * @return the payementDetails
-     */
-    public String getPayementDetails() {
-        return payementDetails;
-    }
-
-    /**
-     * @param payementDetails the payementDetails to set
-     */
-    public void setPayementDetails(String payementDetails) {
-        this.payementDetails = payementDetails;
-    }
-
-    /**
-     * @return the paymentHistory
-     */
-    public String getPaymentHistory() {
-        return paymentHistory;
-    }
-
-    /**
-     * @param paymentHistory the paymentHistory to set
-     */
-    public void setPaymentHistory(String paymentHistory) {
-        this.paymentHistory = paymentHistory;
-    }
+    
 }
