@@ -26,14 +26,14 @@ public class User implements Serializable {
     }
 
     /**
-     * @return the customerId
+     * @return the accountId
      */
     public int getUserId() {
         return accountId;
     }
 
     /**
-     * @param customerId the customerId to set
+     * @param accountId the accountId to set
      */
     public void setUserId(int accountId) {
         this.accountId = accountId;

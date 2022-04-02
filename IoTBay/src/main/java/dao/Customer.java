@@ -17,14 +17,14 @@ public class Customer implements Serializable{
 
     public Customer(){}
     /**
-     * @return the userId
+     * @return the customerId
      */
     public int getCustomerId() {
         return customerID;
     }
 
     /**
-     * @param userId the userId to set
+     * @param customerId
      */
     public void setUserId(int customerID) {
         this.customerID = customerID;
