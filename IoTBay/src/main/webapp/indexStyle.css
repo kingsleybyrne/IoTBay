@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/04/2022, 12:59:08 AM
+    Author     : dylanstyman
+*/
+
+h1 {
+    color: black;
+    font: calibri;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+p1 {
+    display: block;
+    color: black;
+    font: calibri;
+    font-size: medium;
+    text-align: center;
+    //margin-left: auto;
+    //margin-right: auto;
+}
+
+p2 {
+    display: block;
+    color: black;
+    font: calibri;
+    font-size: xx-small;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+
+.centre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.middleA {
+    display: block;
+    color: deeppink;
+    font: calibri;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+    background-color: deeppink;
+}
