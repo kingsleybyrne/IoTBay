@@ -1,0 +1,29 @@
+/*
+*/
+/* 
+    Created on : 3 Apr 2022, 10:23:40 pm
+    Author     : cdanielle
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root{
+    background-color: #4ebdbf;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width:50%;
+  margin: auto;
+  color: #e8e4e3;
+  
+}
+
+input{
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+#register-form{
+    background: rgba(158,105,186,0.8);
+    padding: 1em;
+}
