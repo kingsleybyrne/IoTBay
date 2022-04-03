@@ -1,1 +1,4 @@
 /IoTBay/target/
+*.lst
+*.jar
+*.war
