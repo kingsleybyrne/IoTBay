@@ -5,10 +5,13 @@
  */
 package dao;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kingsleybyrne
  */
-public class Supplier {
+public class Supplier implements Serializable{
+    public Supplier(){}
     
 }

@@ -5,16 +5,21 @@
  */
 package dao;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kingsleybyrne
  */
-public class Order {
+public class Order implements Serializable{
     private int orderId;
     private String date;
     private boolean status;
     private String invoice;
 
+    public Order(){
+    }
+    
     /**
      * @return the orderId
      */
