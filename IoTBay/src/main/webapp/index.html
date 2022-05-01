@@ -1,38 +1,90 @@
 <!--
     Index Page DRAFT for assignment Drafting
 
-    Version: V1
-    Last Edited by: Dylan Styman
-    Last Edited on: 03/04/2022
+    Version: V2
+    Last Edited by: Danielle Alota
+    Last Edited on: 01/07/2022
 -->
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Index Page</title>
+        <title>IoTBay: Buy IoT Devices</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="indexStyle.css">
+        <script src="https://kit.fontawesome.com/5b9a15581a.js" crossorigin="anonymous"></script>
     </head>
+
     <body>
-        
-            <!-- redirect to href page -->
-            <br>
-            <h1> Welcome to IoTBay! </h1> <br>
-            <br>
-            <img src="placeholderImage.jpeg" alt="Placeholder Image" style="width:400px;height:auto;" class="centre"> <br>
-            <br>
-            <p1> IoTBay is a Sydney based company specialising in IoT devices.</p1> <br>
-            <p1> We have all the sensors you could possibly need!</p1> <br>
-            <p1> So come on in and check out what we have for sale!</p1> <br>
-            <br>
-            <a href="register.jsp" class="middleA">Click here to MAKE AN ACCOUNT!</a> <br>
-            <br>
-            <p1> [Test Paragraph] </p1> <br>
-            <br>
-            <p2>
-                41025 - Introduction to Software Development <br>
-                Semester 1, 2022 <br>
-            </p2>
+        <header>
+            <div id="search-area-container">
+                <img src="iotbaylogo.png" alt="" id="logo">
+                <div class="search-form-container">
+                    <form>
+                        <input type="text" placeholder="What are you looking for?" name="search-bar" id="search-bar">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div id="top-buttons">
+                    <a href=""><button>Sign In</button></a>
+                    <a href=""><button>Register</button></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+
+            <div id="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href=""class="nav-link" >Smart Home Devices</a></li>
+                        <li><a href="" class="nav-link">Industrial Sensors</a></li>
+                        <li><a href=""class="nav-link">Industrial Robots</a></li>
+                        <li><a href=""class="nav-link">Healthcare Devices</a></li>
+                        <li><a href=""class="nav-link">Wiring</a></li>
+                        <li><a href=""class="nav-link">Modems and Routers</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="slideshow-container">
+                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+            </div>
+
+            <div id="products-container"> 
+                <div class="products-row">
+                    <div class="products-column">
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                    </div>
+                    <div class="products-column">
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                    </div>
+                    <div class="products-column">
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                        <a href=""><img src="placeholder.jpg" alt=""></a> 
+                    </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; Group 8</p>
+            <p>Introduction to Software Development 2022</p>
+            <p>University of Technology, Sydney</p>
+        </footer>
+        <script type="text/javascript" src="index.js"></script>
+
     </body>
 </html>
