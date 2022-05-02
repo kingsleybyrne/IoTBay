@@ -61,6 +61,15 @@ input{
   border-width: 1px;
 }
 
+#submit{
+  width: 200px;
+  height:50px;
+  background-color: #03bafc;
+  border: none;
+  color: white;
+  border-radius: 25px;
+}
+
 footer{
   margin-top: 1%;
   border-top: 1px solid #000000;
