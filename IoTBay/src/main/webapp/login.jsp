@@ -13,12 +13,12 @@
     </head>
     <body>
         <h1>IoTBay Login Page</h1>
-        <form action="welcome.jsp" method="POST">
-            <label for="email" id="email-label" name="email">Email:</label><br>
-            <input class="" type="email" id="email" placeholder ="Enter your email address..." required><br>
+        <form action="LoginServlet" method="POST">
+            <label for="email" id="email-label" >Email:</label><br>
+            <input class="" type="email" name="email" placeholder ="Enter your email address..." required><br>
             
-            <label for="password" id="password-label" name="password">Password:</label><br>
-            <input class="" type="password" id="password" placeholder ="Enter your password..." required><br>
+            <label for="password" id="password-label">Password:</label><br>
+            <input class="" type="password" name="password" placeholder ="Enter your password..." required><br>
             
             <button type="submit" id="login-button">Login</button>
         </form>
