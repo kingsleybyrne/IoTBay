@@ -1,10 +1,12 @@
-<!--
-    Index Page DRAFT for assignment Drafting
+<%-- 
+    Document   : index
+    Created on : 14 May 2022, 12:28:30 pm
+    Author     : cdanielle
+--%>
 
-    Version: V2
-    Last Edited by: Danielle Alota
-    Last Edited on: 01/07/2022
--->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.*"%>
+<%@page import="controller.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +18,7 @@
         <script src="https://kit.fontawesome.com/5b9a15581a.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
+    <body onload="startTime()">
         <header>
             <div id="search-area-container">
                 <img src="iotbaylogo.png" alt="" id="logo">
@@ -28,7 +30,7 @@
                 </div>
                 <div id="top-buttons"> 
                     <!-- need to change back to jsp -->
-                    <a href="login.html"><button>Sign In</button></a>
+                    <a href="login.jsp"><button>Sign In</button></a>
                     <a href="register.jsp"><button>Register</button></a>
                     <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
@@ -86,6 +88,6 @@
             <p>University of Technology, Sydney</p>
         </footer>
         <script type="text/javascript" src="index.js"></script>
-
+        <jsp:include page="/ConnServlet" flush="true"/>
     </body>
 </html>

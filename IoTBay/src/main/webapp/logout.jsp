@@ -15,15 +15,10 @@
         </header>
 
         <main>
-            <div id="middle-div">
-                <h1>Sign in to IoTBay</h1>
-                <h3>Or <a href="register.jsp">create an account</a></h3>
-                <form action="welcome.jsp" method="POST">
-                    <input class="" type="email" id="email" placeholder ="Email address..." required><br>                
-                    <input class="" type="password" id="password" placeholder ="Password..." required><br>
-                    <button type="submit" id="login-button">Login</button>
-                </form>
+            <div id="main-div">
+                <p>Logged out</p>
             </div>
+            <%session.invalidate();%>
            
         </main>
 
@@ -34,4 +29,18 @@
         </footer>
                 
     </body>
+</html>
+
+<%-- 
+    Document   : logout
+    Created on : 3 Apr 2022, 9:29:23 pm
+    Author     : cdanielle
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
 </html>

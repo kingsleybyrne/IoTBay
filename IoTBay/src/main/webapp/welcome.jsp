@@ -4,9 +4,8 @@
     Author     : cdanielle
 --%>
 
+<%@page import="model.User"%>
 <%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="dao.Customer"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,9 +13,23 @@
         
         <title>IoTBay-Signed In</title>
     </head>
+    <%
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String dob = request.getParameter("dob");
+        String phone = request.getParameter("phone-number");
+        String address = request.getParameter("address");
+        %>
+    
     <body>
-        <h1>Welcome, (name)></h1>
+        <h1>Welcome, <%= name%></h1>
         <p>Loading...</p>
+        
+        <%
+            User user = new User(name, email, phone, address, password, dob);
+            session.setAttribute("user", user);
+            %>
     </body>
 </html>
 
