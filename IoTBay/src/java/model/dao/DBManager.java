@@ -48,14 +48,15 @@ public class DBManager {
     } //need to connect this method to the register.jsp
 
 //update a user details in the database   
-    public void updateUser(String email, String name, String password, String gender, String favcol) throws SQLException {
-        //code for update-operation   
-
+    public void updateUser(String name, String address, String phone, String dob, String email, String password) throws SQLException{
+        statement.executeUpdate("UPDATE iotadmin.Users SET NAME='" + name + "', ADDRESS='" + address + "', PHONE='" + phone + "', DOB='" + dob + "', EMAIL='" + email + "', PASSWORD='"+ password +"' WHERE EMAIL ='"+email+"'" );
     }
 
 //delete a user from the database   
     public void deleteUser(String email) throws SQLException {
-        //code for delete-operation   
+        statement.executeUpdate("DELETE FROM iotadmin.Users WHERE EMAIL='" + email + "'");
 
     }
+
+   
 }

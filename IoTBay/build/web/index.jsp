@@ -21,7 +21,7 @@
     <body onload="startTime()">
         <header>
             <div id="search-area-container">
-                <img src="iotbaylogo.png" alt="" id="logo">
+                <a href="index.html"><img src="images/iotbaylogo.png" alt="" id="logo"></a>
                 <div class="search-form-container">
                     <form>
                         <input type="text" placeholder="What are you looking for?" name="search-bar" id="search-bar">
@@ -30,8 +30,22 @@
                 </div>
                 <div id="top-buttons"> 
                     <!-- need to change back to jsp -->
+                    <%
+                        User user = (User) session.getAttribute("user");
+
+                        if (user == null) {
+                    %>
                     <a href="login.jsp"><button>Sign In</button></a>
                     <a href="register.jsp"><button>Register</button></a>
+
+                    <% } else {
+                    %>
+                    <p>${user.getName()}</p>
+                    <a href="logout.jsp"><button>Log Out</button></a>
+                    <form action="<%=request.getContextPath()%>/ManageProfileServlet" method="post">
+                        <button>Manage My Profile</button>
+                    </form>
+                    <%}%>
                     <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
@@ -53,9 +67,9 @@
 
         <main>
             <div id="slideshow-container">
-                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
-                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
-                    <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+                <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+                <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
+                <div class="img-container slideshow-animation"><img src="placeholder.jpg" alt=""></div>
             </div>
 
             <div id="products-container"> 
@@ -78,7 +92,7 @@
                         <a href=""><img src="placeholder.jpg" alt=""></a> 
                         <a href=""><img src="placeholder.jpg" alt=""></a> 
                     </div>
-            </div>
+                </div>
 
         </main>
 
@@ -89,5 +103,7 @@
         </footer>
         <script type="text/javascript" src="index.js"></script>
         <jsp:include page="/ConnServlet" flush="true"/>
+        <jsp:include page="/ManageProfileServlet" flush="true"/>
+
     </body>
 </html>

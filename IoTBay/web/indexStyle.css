@@ -9,6 +9,7 @@ html, body{
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 #search-area-container{

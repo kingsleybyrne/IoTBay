@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IoTBay: Login</title>
+        <title>IoTBay: Delete User</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="loginStyle.css">
@@ -14,21 +14,17 @@
             </div>
         </header>
 
-        <%
-            String existErr = (String) session.getAttribute("existErr");
-            String emailErr = (String) session.getAttribute("emailErr");
-            String passErr = (String) session.getAttribute("passErr");
-        %>
-
         <main>
             <div id="middle-div">
-                <h1>Sign in to IoTBay</h1>
-                <h3>Or <a href="register.jsp">create an account</a></h3>
-                <span class="message"> <%=(existErr != null ? existErr : "")%></span>
-                <form action="<%=request.getContextPath()%>/LoginServlet" method="POST">
+                <h1>Delete My Account</h1>
+                <form action="<%=request.getContextPath()%>/DeleteServlet" method="POST">
+                    <label for="email" id="email-label" >Email:</label><br>
                     <input class="" type="email" name="email" placeholder ="Enter your email address..." required><br>
+
+                    <label for="password" id="password-label">Password:</label><br>
                     <input class="" type="password" name="password" placeholder ="Enter your password..." required><br>
-                    <button type="submit" id="login-button">Login</button>
+
+                    <button type="submit" id="login-button">Delete</button>
                 </form>
             </div>
         </main>
@@ -38,6 +34,5 @@
             <p>Introduction to Software Development 2022</p>
             <p>University of Technology, Sydney</p>
         </footer>
-
     </body>
 </html>

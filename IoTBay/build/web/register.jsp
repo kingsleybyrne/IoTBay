@@ -12,7 +12,7 @@
     <body>
         <header>
             <div id="top-bar">
-                <a href="index.html"><img src="iotbaylogo.png" alt="" id="logo"></a>
+                <a href="index.html"><img src="images/iotbaylogo.png" alt="" id="logo"></a>
             </div>
         </header>
 
@@ -28,7 +28,7 @@
                 </div>
 
                 <div id="form-container">
-                    <span class="message"> <%=(existErr != null ? existErr : "poo")%></span>
+                    <span class="message"> <%=(existErr != null ? existErr : "")%></span>
 
                     <form action="<%=request.getContextPath()%>/RegisterServlet"  method="post" id="register-form">
                         <div id="top-form-container">

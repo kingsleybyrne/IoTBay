@@ -50,9 +50,10 @@ public class LoginServlet extends HttpServlet {
             try {
                 user = manager.findUser(email, password);
                 if (user != null) {
+                    System.out.println(user.getName());
                     System.out.println("user found");
                     session.setAttribute("user", user);
-                    request.getRequestDispatcher("main.jsp").include(request, response);
+                    request.getRequestDispatcher("index.jsp").include(request, response);
                 } else {
                     System.out.println("user not found");
                     session.setAttribute("existErr", "Oops! No user found.");
