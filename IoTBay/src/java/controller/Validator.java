@@ -18,6 +18,7 @@ public class Validator implements Serializable {
     private final String emailPattern = "([a-zA-Z0-9]+)(([._-])([a-zA-Z0-9]+))*(@)([a-z]+)(.)([a-z]{3})((([.])[a-z]{0,2})*)";
     private final String namePattern = "([A-Z][a-z]+[\\s])+[A-Z][a-z]*";
     private final String passwordPattern = "[a-z0-9]{4,}";
+    private final String phonePattern = "[a-z0-9]{4,}";
 
     public Validator() {
     }
@@ -43,6 +44,9 @@ public class Validator implements Serializable {
 
     public boolean validatePassword(String password) {
         return validate(passwordPattern, password);
+    }
+    public boolean validatePhone(String phone) {
+        return validate(phonePattern, phone);
     }
 
     void clear(HttpSession session) {

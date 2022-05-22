@@ -37,6 +37,9 @@
                 <form action="<%=request.getContextPath()%>/ManageProfileServlet" method="post">
                     <button>Manage My Profile</button>
                 </form>
+                    <form action="<%=request.getContextPath()%>/AdminServlet" method="post">
+                    <button>Admin Dashboard</button>
+                </form>
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </div>
