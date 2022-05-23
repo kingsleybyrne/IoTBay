@@ -42,14 +42,14 @@ public class DBManager {
         return null;
     }
     public User findUserProfile(String email, String phone) throws SQLException {
-        String s = "SELECT * FROM IOTADMIN.Users where EMAIL = '" + email + "'and PHONE='" + phone+ "'";
+        String s = "SELECT * FROM IOTADMIN.Users where NAME = '" + email + "'and PHONE='" + phone+ "'";
         ResultSet rs = statement.executeQuery(s);
         while (rs.next()) {
             System.out.println("looking for user");
-            String userEmail = rs.getString(6);
+            String userName = rs.getString(2);
             String userPhoneNum = rs.getString(4);
-            if (userEmail.equals(email) && userPhoneNum.equals(phone)) {
-                String userName = rs.getString(2);
+            if (userName.equals(email) && userPhoneNum.equals(phone)) {
+                String userEmail = rs.getString(6);
                 String userDOB = rs.getString(5);
                 String userPhone = rs.getString(4); 
                 String userAddr = rs.getString(3);

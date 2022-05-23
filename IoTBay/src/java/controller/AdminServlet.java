@@ -29,13 +29,13 @@ public class AdminServlet extends HttpServlet {
         Validator validator = new Validator();
         User user=null;
         //3- capture the posted email      
-        String email = request.getParameter("email");
+        String name = request.getParameter("name");
         String phone = request.getParameter("phone");
         //5- retrieve the manager instance from session  
         DBManager manager = (DBManager) session.getAttribute("manager");
         validator.clear(session);
 
-        if (!validator.validateEmail(email)) {
+        if (!validator.validateName(name)) {
             System.out.println("wrong email");
             session.setAttribute("emailErr", "Error: Email incorrect");
             request.getRequestDispatcher("adminprofile.jsp").include(request, response);
@@ -45,7 +45,7 @@ public class AdminServlet extends HttpServlet {
             request.getRequestDispatcher("adminProfile.jsp").include(request, response);
         } else {
             try {
-                user = manager.findUserProfile(email, phone);
+                user = manager.findUserProfile(name, phone);
                 if (user != null) {
                     System.out.println(user.getName());
                     System.out.println("user found");
