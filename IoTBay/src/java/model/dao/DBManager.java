@@ -34,7 +34,7 @@ public class DBManager {
             if (userEmail.equals(email) && userPass.equals(password)) {
                 String userName = rs.getString(2);
                 String userDOB = rs.getString(5);
-                String userPhone = rs.getString(4); 
+                String userPhone = rs.getString(10); 
                 String userAddr = rs.getString(3);
                 return new User(userName, userAddr, userPhone, userDOB, userEmail, userPass);
             }
