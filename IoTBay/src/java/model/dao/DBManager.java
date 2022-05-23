@@ -34,7 +34,7 @@ public class DBManager {
             if (userEmail.equals(email) && userPass.equals(password)) {
                 String userName = rs.getString(2);
                 String userDOB = rs.getString(5);
-                String userPhone = rs.getString(10); 
+                String userPhone = rs.getString(4); 
                 String userAddr = rs.getString(3);
                 return new User(userName, userAddr, userPhone, userDOB, userEmail, userPass);
             }
@@ -47,12 +47,13 @@ public class DBManager {
         while (rs.next()) {
             System.out.println("looking for user");
             String userEmail = rs.getString(6);
-            String userPhone = rs.getString(10);
-            if (userEmail.equals(email) && userPhone.equals(phone)) {
+            String userPhoneNum = rs.getString(10);
+            if (userEmail.equals(email) && userPhoneNum.equals(phone)) {
                 String userName = rs.getString(2);
                 String userDOB = rs.getString(5);
-                String userPhone = rs.getString(4); 
+                String userPhone = rs.getString(10); 
                 String userAddr = rs.getString(3);
+                String userPass = rs.getString(7);
                 return new User(userName, userAddr, userPhone, userDOB, userEmail, userPass);
             }
         }
